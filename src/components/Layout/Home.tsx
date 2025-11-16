@@ -1,23 +1,74 @@
 import { Link } from "react-router-dom";
-export function Home() {
 
+const bloques = [
+  {
+    titulo: "Calentamiento de precisión",
+    tiempo: "Bloque 1 · 3 min",
+    descripcion:
+      "Arranca despacio y sin prisas, enfocándote en pulsaciones suaves y limpias.",
+    to: "calentamientoPrecision",
+    cta: "Entrar al bloque",
+  },
+  {
+    titulo: "Drills de errores típicos",
+    tiempo: "Bloque 2 · 5 min",
+    descripcion:
+      "Secuencias con combinaciones conflictivas del español para reducir tropiezos.",
+    to: "drillErrores",
+    cta: "Próximamente",
+    disabled: true,
+  },
+  {
+    titulo: "Texto real",
+    tiempo: "Bloque 3 · 5 min",
+    descripcion:
+      "Fragmentos de código y notas técnicas para entrenar en contexto.",
+    to: "texto",
+    cta: "Próximamente",
+    disabled: true,
+  },
+  {
+    titulo: "Drill personalizado",
+    tiempo: "Bloque 4 · 2 min",
+    descripcion:
+      "La parte creativa: diseña tu propio patrón para trabajarlo a diario.",
+    to: "drillPersonalizado",
+    cta: "Próximamente",
+    disabled: true,
+  },
+];
+
+export function Home() {
   return (
-    <>
-      <h1>PLAN DIARIO DE MECANOGRAFÍA (15 MINUTOS)</h1>
-      <h2>
-        Objetivo: Reducir errores al escribir, mejorar precisión y mantener el
-        enfoque principal en tus estudios de programación.
-      </h2>
-      <ul>
-       <li><h3>BLOQUE 1 — 3 minutos</h3></li>
-       <li><Link to="calentamientoPrecision">Calentamiento de precisión</Link></li>
-       <li><h3>BLOQUE 2 — 5 minutos</h3></li>
-       <li><Link to="drillErrores">Drills de errores típicos del español</Link></li>
-       <li><h3>BLOQUE 3 — 5 minutos</h3></li>
-       <li><Link to="texto">Texto real</Link></li>
-       <li><h3>BLOQUE 4 — 2 minutos</h3></li>
-       <li><Link to="drillPersonalizado">Drill personalizado</Link></li>
-      </ul>
-    </>
+    <section className="home-screen">
+      <header className="home-hero">
+        <p className="eyebrow">Plan diario — 15 minutos</p>
+        <h1>
+          Mecano vibes
+          <span> · precisión antes que velocidad</span>
+        </h1>
+        <p>
+          Reduce errores al escribir, mejora la memoria muscular y conserva la
+          cabeza libre para seguir programando.
+        </p>
+      </header>
+
+      <div className="home-grid">
+        {bloques.map((bloque) => (
+          <article className="home-card" key={bloque.titulo}>
+            <p className="tag">{bloque.tiempo}</p>
+            <h3>{bloque.titulo}</h3>
+            <p>{bloque.descripcion}</p>
+            {bloque.disabled ? (
+              <span className="pill-link disabled">{bloque.cta}</span>
+            ) : (
+              <Link className="pill-link" to={bloque.to}>
+                {bloque.cta}
+              </Link>
+            )}
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }
