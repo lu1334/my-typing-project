@@ -28,6 +28,7 @@ export function Cronometro({ id }: { id: number }) {
         <>
           <button onClick={iniciar}>Iniciar</button>
           <button onClick={parar}>Parar</button>
+          <button onClick={reset}>Reset</button>
         </>
       )}
     </div>
