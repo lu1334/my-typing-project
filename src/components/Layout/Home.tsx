@@ -15,8 +15,7 @@ const bloques = [
     descripcion:
       "Secuencias con combinaciones conflictivas del español para reducir tropiezos.",
     to: "drillErrores",
-    cta: "Próximamente",
-    disabled: true,
+    cta: "Entrar al bloque",
   },
   {
     titulo: "Texto real",
