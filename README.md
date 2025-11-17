@@ -1,6 +1,6 @@
 # Mecano Vibes
 
-[Demo en vivo](URL_DEMO_AQUI) · [Código fuente](URL_REPO_AQUI)
+[Demo en vivo](https://my-typing-project.vercel.app/) · [Código fuente](URL_REPO_AQUI)
 
 Construí esta app porque quería escribir mejor. Me di cuenta de que cuando programo me equivoco en las mismas combinaciones de teclas y casi nunca practico textos completos en español. Así que levanté este mini plan diario para entrenar dedos y cabeza: bloques cortos, cronómetro visible y ejercicios pensados para bajar las prisas.
 
