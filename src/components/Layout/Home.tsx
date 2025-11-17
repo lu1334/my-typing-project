@@ -32,8 +32,7 @@ const bloques = [
     descripcion:
       "La parte creativa: diseña tu propio patrón para trabajarlo a diario.",
     to: "drillPersonalizado",
-    cta: "Próximamente",
-    disabled: true,
+    cta: "Entrar al bloque", 
   },
   
 ];
@@ -59,13 +58,9 @@ export function Home() {
             <p className="tag">{bloque.tiempo}</p>
             <h3>{bloque.titulo}</h3>
             <p>{bloque.descripcion}</p>
-            {bloque.disabled ? (
-              <span className="pill-link disabled">{bloque.cta}</span>
-            ) : (
               <Link className="pill-link" to={bloque.to}>
                 {bloque.cta}
               </Link>
-            )}
           </article>
         ))}
       </div>

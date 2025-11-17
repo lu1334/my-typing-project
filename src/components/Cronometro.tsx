@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useCronometro } from "../context/CronoContex";
 
-export function Cronometro({ id }: { id: number }) {
+export function Cronometro({ id  }: { id: number   }) {
   const { contador, enMarcha, setContador, iniciar, parar, reset } =
     useCronometro();
 
