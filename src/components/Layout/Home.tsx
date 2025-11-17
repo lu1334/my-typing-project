@@ -14,7 +14,7 @@ const bloques = [
     tiempo: "Bloque 2 · 5 min",
     descripcion:
       "Secuencias con combinaciones conflictivas del español para reducir tropiezos.",
-    to: "drillErrores",
+    to: "layoutDrill",
     cta: "Entrar al bloque",
   },
   {
@@ -35,6 +35,7 @@ const bloques = [
     cta: "Próximamente",
     disabled: true,
   },
+  
 ];
 
 export function Home() {

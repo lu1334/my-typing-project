@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { Cronometro } from "./Cronometro";
 import { useCronometro } from "../context/CronoContex";
 
-const FRASE_OBJETIVO = "que con los del para pero cuando";
+const FRASE_OBJETIVO = "también, rápido, canción, teléfono, función";
 const LISTADO_OBJETIVO = FRASE_OBJETIVO.split(" ");
 
-export function CalentamientoPrecision() {
+export function TildesImportantes() {
   const { contador, setEnMarcha } = useCronometro();
   const [texto, setTexto] = useState<string>("");
   const [contadorTexto, setContadorTexto] = useState<number>(0);
@@ -32,7 +32,6 @@ export function CalentamientoPrecision() {
   }, [texto]);
 
   useEffect(() => {
-    const palabraFalladas  = {}
     if (contador === 5) {
       const palabras = texto.trim().split(" ");
       const ultima = palabras[palabras.length - 1];
@@ -43,7 +42,6 @@ export function CalentamientoPrecision() {
 
       if (!esCorrecta) {
         setContadorTexto((prev) => prev + 1);
-
       }
     }
   }, [contador, texto]);
@@ -71,8 +69,9 @@ export function CalentamientoPrecision() {
 
       <article className="session-card">
         <header className="session-header">
-          <p className="eyebrow">Bloque 1 — 3 minutos</p>
-          <h2>Calentamiento de precisión</h2>
+          <p className="eyebrow">Bloque 2 — 5 minutos</p>
+          <h2>Drills de errores típicos del español:</h2>
+          <p>1 minuto — Tildes importantes:</p>
           <p>
             Repite esta línea tres veces sin usar backspace dentro de cada
             palabra. Escribe despacio, buscando exactitud absoluta.
@@ -108,6 +107,7 @@ export function CalentamientoPrecision() {
           </div>
         )}
       </article>
+      
 
     </section>
   );
