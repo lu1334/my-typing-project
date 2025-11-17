@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Cronometro } from "./Cronometro";
 import { useCronometro } from "../context/CronoContex";
 
-const FRASE_OBJETIVO = "tr pr br gr cr pl programar progreso crear grande planta";
+const FRASE_OBJETIVO =
+  "tr pr br gr cr pl programar progreso crear grande planta";
 const LISTADO_OBJETIVO = FRASE_OBJETIVO.split(" ");
 
 export function DrillErrores() {
@@ -11,10 +12,10 @@ export function DrillErrores() {
   const [texto, setTexto] = useState<string>("");
   const [contadorTexto, setContadorTexto] = useState<number>(0);
   const navigate = useNavigate();
-  const finalizado = contador >= 5;
+  const finalizado = contador >= 60;
 
   useEffect(() => {
-    if (contador >= 5) {
+    if (contador >= 60) {
       setEnMarcha(false);
     }
   }, [contador, setEnMarcha]);
@@ -32,7 +33,7 @@ export function DrillErrores() {
   }, [texto]);
 
   useEffect(() => {
-    if (contador === 5) {
+    if (contador === 60) {
       const palabras = texto.trim().split(" ");
       const ultima = palabras[palabras.length - 1];
 
@@ -56,7 +57,7 @@ export function DrillErrores() {
   return (
     <section className="session-screen">
       <div className="timer-panel">
-        <Cronometro id={5} />
+        <Cronometro id={60} />
         <div className="timer-meta">
           <p className={`status-pill ${finalizado ? "success" : ""}`}>
             {finalizado ? "Ejercicio finalizado" : "Mantén la precisión"}
@@ -107,7 +108,6 @@ export function DrillErrores() {
           </div>
         )}
       </article>
-
     </section>
   );
 }

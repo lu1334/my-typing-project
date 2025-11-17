@@ -11,11 +11,11 @@ export function CalentamientoPrecision() {
   const [texto, setTexto] = useState<string>("");
   const [contadorTexto, setContadorTexto] = useState<number>(0);
   const navigate = useNavigate();
-  const finalizado = contador >= 5;
+  const finalizado = contador >= 60;
 
 
   useEffect(() => {
-    if (contador >= 5) {
+    if (contador >= 60) {
       setEnMarcha(false);
     }
   }, [contador, setEnMarcha]);
@@ -33,7 +33,7 @@ export function CalentamientoPrecision() {
   }, [texto]);
 
   useEffect(() => {
-    if (contador === 5) {
+    if (contador === 60) {
       const palabras = texto.trim().split(" ");
       const ultima = palabras[palabras.length - 1];
 
@@ -58,7 +58,7 @@ export function CalentamientoPrecision() {
   return (
     <section className="session-screen">
       <div className="timer-panel">
-        <Cronometro id={5} />
+        <Cronometro id={60} />
         <div className="timer-meta">
           <p className={`status-pill ${finalizado ? "success" : ""}`}>
             {finalizado ? "Ejercicio finalizado" : "Mantén la precisión"}

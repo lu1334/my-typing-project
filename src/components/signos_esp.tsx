@@ -11,10 +11,10 @@ export function SignosESP() {
   const [texto, setTexto] = useState<string>("");
   const [contadorTexto, setContadorTexto] = useState<number>(0);
   const navigate = useNavigate();
-  const finalizado = contador >= 5;
+  const finalizado = contador >= 120;
 
   useEffect(() => {
-    if (contador >= 5) {
+    if (contador >= 120) {
       setEnMarcha(false);
     }
   }, [contador, setEnMarcha]);
@@ -32,7 +32,7 @@ export function SignosESP() {
   }, [texto]);
 
   useEffect(() => {
-    if (contador === 5) {
+    if (contador === 120) {
       const palabras = texto.trim().split(" ");
       const ultima = palabras[palabras.length - 1];
 
@@ -56,7 +56,7 @@ export function SignosESP() {
   return (
     <section className="session-screen">
       <div className="timer-panel">
-        <Cronometro id={5} />
+        <Cronometro id={120} />
         <div className="timer-meta">
           <p className={`status-pill ${finalizado ? "success" : ""}`}>
             {finalizado ? "Ejercicio finalizado" : "Mantén la precisión"}
@@ -107,8 +107,6 @@ export function SignosESP() {
           </div>
         )}
       </article>
-      
-
     </section>
   );
 }
