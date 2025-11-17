@@ -1,73 +1,38 @@
-# React + TypeScript + Vite
+# Mecano Vibes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Demo en vivo](URL_DEMO_AQUI) · [Código fuente](URL_REPO_AQUI)
 
-Currently, two official plugins are available:
+Construí esta app porque quería escribir mejor. Me di cuenta de que cuando programo me equivoco en las mismas combinaciones de teclas y casi nunca practico textos completos en español. Así que levanté este mini plan diario para entrenar dedos y cabeza: bloques cortos, cronómetro visible y ejercicios pensados para bajar las prisas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ¿Qué incluye?
 
-## React Compiler
+- **Menú diario de 4 bloques**: una ruta guiada de 15 minutos que me recuerda por dónde empezar y cómo cerrar.
+- **Cronómetro global**: todos los ejercicios comparten el mismo `CronoProvider`, así que pausar o reiniciar se siente consistente.
+- **Calentamiento de precisión**: repetir palabras básicas sin usar backspace y contar errores para medir la mejora.
+- **Drills temáticos**: combinaciones conflictivas (`tr`, `pr`, `br`…), tildes frecuentes, signos españoles y un modo mezcla que junta todo.
+- **Texto real controlado**: escribir un párrafo lento, sin corregir hasta el final, para practicar foco y paciencia.
+- **Drill personalizado**: un espacio en blanco para anotar las combinaciones que más me cuestan después de cada sesión.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías y estructura
 
-## Expanding the ESLint configuration
+- React + TypeScript sobre Vite.
+- React Router para moverme entre bloques (`Home`, `LayoutDrills`, drills específicos, texto real y personalización).
+- Context API simple (`CronoProvider`) que maneja el cronómetro, su estado y los botones de control.
+- Componentes accesibles y textos en español para mantener el contexto del entrenamiento.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Cómo correrla
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm install # o yarn/npm, lo que uses
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Luego entro a `http://localhost:5173` y sigo el plan diario.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Próximos pasos que me gustaría intentar
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Guardar los conteos de errores por bloque para ver progreso semanal.
+2. Añadir sonidos o vibraciones suaves al terminar cada bloque.
+3. Permitir que las frases objetivo se puedan editar desde la UI.
+
+Si quieres practicar escritura consciente y también tocar un poco de React Router + contextos, este proyecto es un buen punto de partida.
