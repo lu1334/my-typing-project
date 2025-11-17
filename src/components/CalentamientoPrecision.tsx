@@ -13,6 +13,7 @@ export function CalentamientoPrecision() {
   const navigate = useNavigate();
   const finalizado = contador >= 5;
 
+
   useEffect(() => {
     if (contador >= 5) {
       setEnMarcha(false);
@@ -39,7 +40,7 @@ export function CalentamientoPrecision() {
       if (ultima.length === 0) return;
 
       const esCorrecta = LISTADO_OBJETIVO.includes(ultima);
-
+      
       if (!esCorrecta) {
         setContadorTexto((prev) => prev + 1);
 

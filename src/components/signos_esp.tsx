@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { Cronometro } from "./Cronometro";
 import { useCronometro } from "../context/CronoContex";
 
-const FRASE_OBJETIVO = "tr pr br gr cr pl programar progreso crear grande planta";
+const FRASE_OBJETIVO = "¿cómo? ¡listo! —hola— (prueba) “texto";
 const LISTADO_OBJETIVO = FRASE_OBJETIVO.split(" ");
 
-export function DrillErrores() {
+export function SignosESP() {
   const { contador, setEnMarcha } = useCronometro();
   const [texto, setTexto] = useState<string>("");
   const [contadorTexto, setContadorTexto] = useState<number>(0);
@@ -62,7 +62,7 @@ export function DrillErrores() {
             {finalizado ? "Ejercicio finalizado" : "Mantén la precisión"}
           </p>
           <button className="menu-button" onClick={() => navigate(-1)}>
-            Menú Drill
+            Menú drill
           </button>
         </div>
       </div>
@@ -71,7 +71,7 @@ export function DrillErrores() {
         <header className="session-header">
           <p className="eyebrow">Bloque 2 — 5 minutos</p>
           <h2>Drills de errores típicos del español:</h2>
-          <p>1 minuto — combinaciones difíciles:</p>
+          <p>1 minuto — signos españoles::</p>
           <p>
             Repite esta línea tres veces sin usar backspace dentro de cada
             palabra. Escribe despacio, buscando exactitud absoluta.
@@ -107,6 +107,7 @@ export function DrillErrores() {
           </div>
         )}
       </article>
+      
 
     </section>
   );

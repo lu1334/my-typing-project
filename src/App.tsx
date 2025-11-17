@@ -4,8 +4,10 @@ import { Home } from "./components/Layout/Home";
 import { CalentamientoPrecision } from "./components/CalentamientoPrecision";
 import { DrillErrores } from "./components/DrillErrores";
 import { TildesImportantes } from "./components/TildesImportantes";
-import "./App.css";
 import { LayoutDrills } from "./components/Layout/LayoutDrills";
+import { SignosESP } from "./components/signos_esp";
+import { Mezcla } from "./components/Mezcla";
+import "./App.css";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <Route path="layoutDrill" element={<LayoutDrills />} />
       <Route path="drillErrores" element={<DrillErrores />} />
       <Route path="tildes" element={<TildesImportantes />} />
+      <Route path="signos" element={<SignosESP />} />
+      <Route path="mezcla" element={<Mezcla />} />
     </Routes>
   );
 }

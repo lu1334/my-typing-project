@@ -11,6 +11,16 @@ const drills = [
     description: "Memoriza las combinaciones con acento más frecuentes.",
     to: "/tildes",
   },
+  {
+    title: "Signos españoles",
+    description: "Memoriza las combinaciones con acento más frecuentes.",
+    to: "/signos",
+  },
+  {
+    title: "Mezcla",
+    description: "Memoriza las combinaciones con acento más frecuentes.",
+    to: "/mezcla",
+  },
 ];
 
 export function LayoutDrills() {

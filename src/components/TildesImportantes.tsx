@@ -62,7 +62,7 @@ export function TildesImportantes() {
             {finalizado ? "Ejercicio finalizado" : "Mantén la precisión"}
           </p>
           <button className="menu-button" onClick={() => navigate(-1)}>
-            Menú principal
+            Menú drill
           </button>
         </div>
       </div>
