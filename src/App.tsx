@@ -7,6 +7,7 @@ import { TildesImportantes } from "./components/TildesImportantes";
 import { LayoutDrills } from "./components/Layout/LayoutDrills";
 import { SignosESP } from "./components/signos_esp";
 import { Mezcla } from "./components/Mezcla";
+import { CorregirFinalTexto } from "./components/CorregirFrase";
 import "./App.css";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path="tildes" element={<TildesImportantes />} />
       <Route path="signos" element={<SignosESP />} />
       <Route path="mezcla" element={<Mezcla />} />
+      <Route path="corregir" element={<CorregirFinalTexto />} />
     </Routes>
   );
 }

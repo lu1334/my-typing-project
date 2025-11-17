@@ -22,9 +22,9 @@ const bloques = [
     tiempo: "Bloque 3 · 5 min",
     descripcion:
       "Fragmentos de código y notas técnicas para entrenar en contexto.",
-    to: "texto",
-    cta: "Próximamente",
-    disabled: true,
+    to: "corregir",
+    cta: "Entrar al bloque",
+   
   },
   {
     titulo: "Drill personalizado",
