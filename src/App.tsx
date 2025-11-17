@@ -13,11 +13,11 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
       </Route>
-      <Route path="layoutDrill" element={<LayoutDrills />} />
       <Route
         path="calentamientoPrecision"
         element={<CalentamientoPrecision />}
       />
+      <Route path="layoutDrill" element={<LayoutDrills />} />
       <Route path="drillErrores" element={<DrillErrores />} />
       <Route path="tildes" element={<TildesImportantes />} />
     </Routes>

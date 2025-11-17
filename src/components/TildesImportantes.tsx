@@ -61,7 +61,7 @@ export function TildesImportantes() {
           <p className={`status-pill ${finalizado ? "success" : ""}`}>
             {finalizado ? "Ejercicio finalizado" : "Mantén la precisión"}
           </p>
-          <button className="ghost-button" onClick={() => navigate(-1)}>
+          <button className="menu-button" onClick={() => navigate(-1)}>
             Menú principal
           </button>
         </div>

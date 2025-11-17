@@ -32,7 +32,6 @@ export function CalentamientoPrecision() {
   }, [texto]);
 
   useEffect(() => {
-    const palabraFalladas  = {}
     if (contador === 5) {
       const palabras = texto.trim().split(" ");
       const ultima = palabras[palabras.length - 1];
@@ -63,7 +62,7 @@ export function CalentamientoPrecision() {
           <p className={`status-pill ${finalizado ? "success" : ""}`}>
             {finalizado ? "Ejercicio finalizado" : "Mantén la precisión"}
           </p>
-          <button className="ghost-button" onClick={() => navigate(-1)}>
+          <button className="menu-button" onClick={() => navigate(-1)}>
             Menú principal
           </button>
         </div>
